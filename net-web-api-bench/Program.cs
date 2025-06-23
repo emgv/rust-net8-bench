@@ -26,7 +26,7 @@ bool IsPrimeNaive(int number)
 
 app.MapGet("/api/cars/{count}", async (int count) =>
 {
-    using var connection = new NpgsqlConnection("Host=172.21.194.214;Port=5432;Database=cars;Username=cars;Password=hellopwd;SSL Mode=Require;Trust Server Certificate=true");
+    using var connection = new NpgsqlConnection("Host=<ip-database-container>;Port=5432;Database=cars;Username=cars;Password=hellopwd;SSL Mode=Require;Trust Server Certificate=true");
     return await connection.QueryAsync<Car>("select * from car order by RANDOM() limit @Limit", new { Limit = count });
 });
 
