@@ -1,0 +1,11 @@
+obj
+bin
+Dockerfile
+.vs
+.dockerignore
+.git
+.gitignore
+.idea
+docker-compose.yaml
+monitor
+db

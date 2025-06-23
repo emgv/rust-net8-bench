@@ -1,0 +1,9 @@
+target
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.idea
+docker-compose.yaml
+monitor
+db

@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+scrape_configs:
+  - job_name: rs-web-api-monitoring
+    honor_labels: true
+    static_configs:
+      - targets: ['172.21.194.214:8080']
