@@ -1,5 +1,11 @@
 # Rust Axum Sqlx vs .Net8 Dapper benchmark
 
+## How to run the benchmarks
+```
+cd /path/to/net-web-api-bench or cd /path/to/rs-web-api
+docker compose up -d
+```
+
 ## Results
 - Web API request 1 random car
   - Net8: ![Net8-Cars-1](results/net8-wrk-cars-1.jpg)
