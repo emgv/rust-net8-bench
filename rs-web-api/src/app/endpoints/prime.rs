@@ -39,13 +39,17 @@ async fn get_prime_entry(axum::extract::Path(n): axum::extract::Path<u32>) -> im
 }
 
 fn is_prime_naive(number: u32) -> bool {
-
+    
     if number <= 1 {
         return false;
     }
 
-    if number % 2 == 0 {
+    if number == 2 {
         return true;
+    }
+
+    if number % 2 == 0 {
+        return false;
     }
 
     for i in (3..number).step_by(2) {

@@ -11,7 +11,8 @@ var app = builder.Build();
 bool IsPrimeNaive(int number)
 {
     if (number <= 1) return false;
-    if (number % 2 == 0) return true;
+    if (number == 2) return true;
+    if (number % 2 == 0) return false;
 
     for (int i = 3; i < number; i+=2)
     {
@@ -26,7 +27,7 @@ bool IsPrimeNaive(int number)
 
 app.MapGet("/api/cars/{count}", async (int count) =>
 {
-    using var connection = new NpgsqlConnection("Host=<ip-database-container>;Port=5432;Database=cars;Username=cars;Password=hellopwd;SSL Mode=Require;Trust Server Certificate=true");
+    using var connection = new NpgsqlConnection("Host=172.21.194.214;Port=5432;Database=cars;Username=cars;Password=hellopwd;SSL Mode=Require;Trust Server Certificate=true");
     return await connection.QueryAsync<Car>("select * from car order by RANDOM() limit @Limit", new { Limit = count });
 });
 
