@@ -4,7 +4,7 @@
 - Set the database container ip address
   - Net8: go to ```net-web-api-bench/Program.cs``` and update the placeholder ```<ip-database-container>```
   - Axum: go to ```rs-web-api/src/app.rs``` and update the placeholder ```<ip-database-container>```
-- Run the app
+- Run the app (run ```docker compose down``` first if the net8 or axum containers are running already)
   ```
   cd /path/to/net-web-api-bench or cd /path/to/rs-web-api
   docker compose up -d
