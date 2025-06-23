@@ -11,7 +11,7 @@ pub async fn startup() -> Result<(), Box<dyn std::error::Error>> {
         .min_connections(16)
         .max_connections(92)
         .test_before_acquire(false)
-        .connect("postgres://cars:hellopwd@172.21.194.214/cars?sslmode=require")
+        .connect("postgres://cars:hellopwd@<ip-database-container>/cars?sslmode=require")
         .await?;
 
     let app = axum::Router::new()
