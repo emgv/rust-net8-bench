@@ -5,10 +5,10 @@
   - Net8: go to ```net-web-api-bench/Program.cs``` and update the placeholder ```<ip-database-container>```
   - Axum: go to ```rs-web-api/src/app.rs``` and update the placeholder ```<ip-database-container>```
 - Run the app
-```
-cd /path/to/net-web-api-bench or cd /path/to/rs-web-api
-docker compose up -d
-```
+  ```
+  cd /path/to/net-web-api-bench or cd /path/to/rs-web-api
+  docker compose up -d
+  ```
 
 ## Results
 - Web API request 1 random car
