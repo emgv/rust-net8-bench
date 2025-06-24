@@ -1,4 +1,7 @@
 # Rust Axum Sqlx vs .Net8 Dapper benchmark
+## Specs
+- CPU: 12th Gen Intel(R) Core(TM) i7-1265U
+- RAM: 16GB
 
 ## How to run the benchmarks
 - Set the database container ip address
